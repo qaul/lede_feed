@@ -30,13 +30,10 @@ CMAKE_OPTIONS += \
 		 -DUSE_OWN_MBED_TLS=OFF
 
 define Package/qaul
-  SECTION:=base
-  CATEGORY:=Base system
-  DEPENDS:=
+  SECTION:=net
+  CATEGORY:=Network
   TITLE:=qaul
-endef
-
-define Package/qaul/install
+  DEPENDS:=
 endef
 
 $(eval $(call BuildPackage,qaul))
