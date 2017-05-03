@@ -11,3 +11,12 @@ How to build
 	make menuconfig
 	# under Network -> qaul
 	make package/qaul/compile
+
+Debugging
+---------
+
+To debug qaul.net building run
+
+	make package/qaul/compile -j1 V=s
+
+

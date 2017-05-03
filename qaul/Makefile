@@ -1,9 +1,8 @@
 #
-# Copyright (C) 2014-2016 OpenWrt.org
+# qaul.net is free software
+# licensed under GPL (version 3)
 #
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
-#
+
 
 include $(TOPDIR)/rules.mk
 
@@ -19,7 +18,7 @@ CMAKE_INSTALL:=1
 PKG_LICENSE:=GPL-3.0
 PKG_LICENSE_FILES:=
 
-PKG_MAINTAINER:=Foo Bar <foo@bar>
+PKG_MAINTAINER:=qaul.net community <contact@qaul.net>
 
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
@@ -27,13 +26,13 @@ include $(INCLUDE_DIR)/cmake.mk
 CMAKE_OPTIONS += \
 		 -DGUI=CLI \
 		 -DVOIP=NO \
-		 -DUSE_OWN_MBED_TLS=OFF
+		 -DUSE_SYSTEM_MBEDTLS=YES
 
 define Package/qaul
   SECTION:=net
   CATEGORY:=Network
-  TITLE:=qaul
-  DEPENDS:=
+  TITLE:=qaul.net
+  DEPENDS:=+olsr +mbedtls
 endef
 
 $(eval $(call BuildPackage,qaul))
