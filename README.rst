@@ -1,7 +1,9 @@
 How to build
 ============
 
+
 .. code::
+
 	cd lede
 	echo 'src-git qaulfeed https://github.com/qaul/lede_feed.git' >> feeds.conf
 	./scripts/feeds update
